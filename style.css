@@ -334,80 +334,107 @@ section {
 }
 
 .gen-img {
-    display: flex;
-    height: 5rem;
-    align-items: center;
-    position: relative;
-    margin-top: 2rem;
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
 }
 
 .gen-img .info {
-    position: absolute;
-    top: .5rem;
-    left: 4rem;
-    width: 100%;
+  position: absolute;
+  top: 0.5rem;
+  left: 4rem;
+  width: 100%;
 }
 
 .gen-img .info .gen-name {
-    margin-bottom: -1rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-left: -.6rem;
+  margin-bottom: -1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -0.6rem;
 }
 
 .gengit-img {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.gengit-img img{
-    margin: 0 -2.7rem -1rem .3rem;
-    width: 2rem;
+.gengit-img img {
+  margin: 0 -2.7rem -1rem 0.3rem;
+  width: 2rem;
 }
 
 .gengit-img span {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .gen-img .generated-image {
-    width: 4rem;
-    border-radius: .5rem;
+  width: 4rem;
+  border-radius: 0.5rem;
 }
 
 input[type="text"] + span,
 input[type="email"] + span {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
 }
 
 input[type="text"]:invalid + span::before,
 input[type="email"]:invalid + span::before {
-    content: "Can't be left blank";
-    color: var(--Orange-500);
-    position: absolute;
-    top: -2rem;
-    font-size: .8rem
+  content: "Can't be left blank";
+  color: var(--Orange-500);
+  position: absolute;
+  top: -2rem;
+  font-size: 0.8rem;
 }
 
-
-
+/* Tablet */
 @media only screen and (max-width: 48em) {
+  body {
+    background-image: url(./images/background-tablet.png);
+  }
 
-    body {
-        background-image: url(./images/background-tablet.png);
-    }
+  .pattern-squigly {
+    width: 20%;
+  }
 
-    main {
-        width: 100%;
-    }
+  .patter-squigly-bottom {
+    bottom: -18rem;
+    width: 60%;
+  }
 
-    h1 {
-      font-size: 2rem;
-    }
+  main {
+    width: 100%;
+  }
 
-    form {
-      width: 90%;
-    }
+  h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .ticket-info {
+    width: 100%;
+  }
 }
 
+/* Mobile */
+@media only screen and (max-width: 30em) {
+  body {
+    background-image: url("./images/background-mobile.png");
+  }
+}
 
+/* Desktop */
+@media only screen and (min-width: 48.0625) {
+  body {
+    background-image: url("./images/background-desktop.png");
+  }
+}
