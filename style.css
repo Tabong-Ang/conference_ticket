@@ -395,12 +395,16 @@ input[type="email"]:invalid + span::before {
     background-image: url(./images/background-tablet.png);
   }
 
+  .attribution {
+    margin-top: 14rem;
+  }
+
   .pattern-squigly {
     width: 20%;
   }
 
   .patter-squigly-bottom {
-    bottom: -18rem;
+    bottom: -12rem;
     width: 60%;
   }
 
@@ -422,6 +426,10 @@ input[type="email"]:invalid + span::before {
 
   .ticket-info {
     width: 100%;
+  }
+
+  .gen-img {
+    margin-top: 1rem;
   }
 }
 
