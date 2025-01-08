@@ -100,13 +100,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   position: relative;
-  margin: 0;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 .pattern-lines {
@@ -413,12 +408,25 @@ input[type="email"]:invalid + span::before {
     width: 20%;
   }
 
+  .pattern-circle-1 {
+    display: none;
+  } 
+
+  .pattern-circle-2 {
+    display: none;
+  }
+
   main {
     width: 100%;
   }
 
   h1 {
     font-size: 2rem;
+  }
+
+  .conf-motiv p {
+    padding:0 3rem;
+    font-size: 1.2rem;
   }
 
   form {
@@ -437,14 +445,6 @@ input[type="email"]:invalid + span::before {
     margin-top: 1rem;
   }
 
-  .pattern-lines,
-  .pattern-circle-1,
-  .pattern-circle-2,
-  .pattern-squigly,
-  .patter-squigly-bottom {
-    position: absolute;
-    z-index: -1;
-  }
 }
 
 /* Mobile */
