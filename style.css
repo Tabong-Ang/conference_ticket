@@ -86,6 +86,11 @@ h6 {
   top: -2rem;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 html {
   font-family: "Inconsolata", serif;
 }
@@ -94,6 +99,14 @@ body {
   background-image: url(./images/background-desktop.png);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 .pattern-lines {
@@ -123,7 +136,7 @@ body {
 
 .patter-squigly-bottom {
   position: absolute;
-  bottom: -21rem;
+  bottom: 0;
   left: 0;
   z-index: -1;
 }
@@ -137,6 +150,7 @@ header {
 main {
   width: 50%;
   margin: 2rem auto 0;
+  flex: 1;
 }
 
 h1 {
@@ -395,17 +409,8 @@ input[type="email"]:invalid + span::before {
     background-image: url(./images/background-tablet.png);
   }
 
-  .attribution {
-    margin-top: 14rem;
-  }
-
   .pattern-squigly {
     width: 20%;
-  }
-
-  .patter-squigly-bottom {
-    bottom: -12rem;
-    width: 60%;
   }
 
   main {
@@ -430,6 +435,15 @@ input[type="email"]:invalid + span::before {
 
   .gen-img {
     margin-top: 1rem;
+  }
+
+  .pattern-lines,
+  .pattern-circle-1,
+  .pattern-circle-2,
+  .pattern-squigly,
+  .patter-squigly-bottom {
+    position: absolute;
+    z-index: -1;
   }
 }
 
