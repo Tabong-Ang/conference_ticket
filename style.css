@@ -102,6 +102,7 @@ body {
   position: relative;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 .pattern-lines {
@@ -426,7 +427,6 @@ input[type="email"]:invalid + span::before {
 
   .conf-motiv p {
     padding:0 3rem;
-    font-size: 1.2rem;
   }
 
   form {
