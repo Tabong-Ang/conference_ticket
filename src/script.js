@@ -91,36 +91,38 @@ function capitalizeName(name) {
     .join(" ");
 }
 
-const showError = (input, message) => {
-  const errorSpan = document.getElementById(`${input.id}-error`);
-  errorSpan.textContent = message;
-  errorSpan.style.display = "block";
-  errorSpan.style.color = "red";
-};
+submitBtn.addEventListener("click", (e) => {
+  let formValid = true;
+  const inputElements = document.querySelectorAll(
+    "input[type='text'], input[type='email']"
+  );
 
-const hideError = (input) => {
-  const errorSpan = document.getElementById(`${input.id}-error`);
-  errorSpan.textContent = "";
-  errorSpan.style.display = "none";
-};
-
-const validateEmail = () => {
-    if (!email.validity.valid) {
-      showError(email, 'Please enter a valid email.');
+  inputElements.forEach((input) => {
+    const span = input.nextElementSibling;
+    if (!input.validity.valid) {
+      formValid = false;
+      if (span && span.tagName === "SPAN") {
+        span.style.display = "block";
+        input.style.border = "1px solid var(--Orange-700)";
+      }
     } else {
-      hideError(email);
+      if (span && span.tagName === "SPAN") {
+        span.style.display = "none";
+        input.style.border = "1px solid var(--Green-600-medium)";
+      }
     }
-  };
+  });
 
-submitBtn.addEventListener("click", () => {
-  congratsSpan.innerHTML = `${capitalizeName(fullName.value)}!`;
-  emailSpan.innerHTML = `${email.value} `;
-  genImage.src = image.src;
-  genImage.style.display = "block";
-  generatedName.innerHTML = `${capitalizeName(fullName.value)}`;
-  const generatedGithub = document.querySelector(".gen-github");
-  generatedGithub.innerHTML = `${githubInfo.value}`;
-
-  main.style.display = "none";
-  section.style.display = "block";
+  if (formValid) {
+    main.style.display = "none";
+    section.style.display = "block";
+    congratsSpan.innerHTML = `${capitalizeName(fullName.value)}!`;
+    emailSpan.innerHTML = `${email.value} `;
+    genImage.src = image.src;
+    genImage.style.display = "block";
+    generatedName.innerHTML = `${capitalizeName(fullName.value)}`;
+    const generatedGithub = document.querySelector(".gen-github");
+    generatedGithub.innerHTML = `${githubInfo.value}`;
+  }
 });
+

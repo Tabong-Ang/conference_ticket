@@ -103,6 +103,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 .pattern-lines {
@@ -305,7 +306,7 @@ button {
 section {
   display: none;
   width: 50%;
-  margin: 4rem auto 0;
+  margin: 4rem auto 20rem;
 }
 
 .congrats span {
@@ -387,7 +388,7 @@ section {
 input[type="text"] + span,
 input[type="email"] + span {
   position: relative;
-  display: block;
+  display: none;
 }
 
 input[type="text"]:invalid + span::before,
@@ -397,6 +398,10 @@ input[type="email"]:invalid + span::before {
   position: absolute;
   top: -2rem;
   font-size: 0.8rem;
+}
+
+input[type="email"]:invalid + span::before {
+  content: "Please enter a valid email address";
 }
 
 /* Tablet */
@@ -443,6 +448,10 @@ input[type="email"]:invalid + span::before {
 
   .gen-img {
     margin-top: 1rem;
+  }
+
+  .gen-img .info .gen-name {
+    margin-left: -1rem;
   }
 
 }
